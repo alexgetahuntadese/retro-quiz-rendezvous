@@ -16,6 +16,7 @@ import { grade12CivicsQuestions } from '@/data/grade12CivicsQuestions';
 import { grade12ITQuestions } from '@/data/grade12ITQuestions';
 import { grade11Biology } from '@/data/grade11Biology';
 import { grade11AgricultureQuestions } from '@/data/grade11AgricultureQuestions';
+import { grade11MathematicsQuestions } from '@/data/grade11MathematicsQuestions';
 
 const ChaptersPage = () => {
   const navigate = useNavigate();
