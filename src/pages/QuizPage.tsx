@@ -14,7 +14,7 @@ import { getGrade11BiologyQuestions } from '@/data/grade11Biology';
 import { getGrade11PhysicsQuestions } from '@/data/grade11Physics';
 import { getGrade11ChemistryQuestions } from '@/data/grade11Chemistry';
 import { getGrade11AgricultureQuestions } from '@/data/grade11AgricultureQuestions';
-import { getGrade11MathematicsQuestions } from '@/data/grade11MathematicsQuestions';
+
 import QuestionCard from '@/components/QuestionCard';
 import Results from '@/components/Results';
 import { Button } from "@/components/ui/button";
@@ -40,16 +40,6 @@ const getQuestionsForSubject = (subject: string, chapter: string, difficulty: st
       const difficultyLevel = difficulty.toLowerCase() as 'easy' | 'medium' | 'hard';
       
       switch (subject) {
-        case 'Mathematics':
-          const grade11MathQuestions = getGrade11MathematicsQuestions(chapter, difficultyLevel, count);
-          return grade11MathQuestions.map(q => ({
-            id: q.id,
-            question: q.question,
-            options: q.options,
-            correct: q.correct,
-            explanation: q.explanation
-          }));
-          
         case 'Biology':
           const grade11BioQuestions = getGrade11BiologyQuestions(chapter, difficultyLevel, count);
           return grade11BioQuestions.map(q => ({

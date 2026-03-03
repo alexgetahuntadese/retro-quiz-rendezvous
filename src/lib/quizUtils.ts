@@ -2,7 +2,7 @@
 import { grade11AgricultureQuestions } from "@/data/grade11AgricultureQuestions";
 import { grade11Biology } from "@/data/grade11Biology";
 import { grade11Chemistry } from "@/data/grade11Chemistry";
-import { grade11Mathematics } from "@/data/grade11Mathematics";
+
 import { grade11Physics } from "@/data/grade11Physics";
 import { grade12AgricultureQuestions } from "@/data/grade12AgricultureQuestions";
 import { grade12BiologyQuestions } from "@/data/grade12BiologyQuestions";
@@ -48,7 +48,6 @@ const questionSets: Record<string, Record<string, any>> = {
     "Agriculture": grade11AgricultureQuestions,
     "Biology": grade11Biology,
     "Chemistry": grade11Chemistry,
-    "Mathematics": grade11Mathematics,
     "Physics": grade11Physics,
   },
   "12": {
