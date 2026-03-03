@@ -77,6 +77,32 @@ const ChaptersPage = () => {
       });
     }
 
+    // Handle Grade 11 Mathematics
+    if (decodedSubject === 'Mathematics' && grade === '11') {
+      return Object.keys(grade11MathematicsQuestions).map((chapterName, index) => {
+        const questions = grade11MathematicsQuestions[chapterName];
+        const easyQuestions = questions.filter(q => q.difficulty === 'Easy').length;
+        const mediumQuestions = questions.filter(q => q.difficulty === 'Medium').length;
+        const hardQuestions = questions.filter(q => q.difficulty === 'Hard').length;
+        
+        return {
+          id: index + 1,
+          title: chapterName,
+          description: getGrade11MathChapterDescription(chapterName),
+          duration: getDurationEstimate(questions.length),
+          difficulty: getDominantDifficulty(easyQuestions, mediumQuestions, hardQuestions),
+          progress: Math.floor(Math.random() * 101),
+          isCompleted: Math.random() > 0.7,
+          questionsCount: questions.length,
+          difficultyBreakdown: {
+            easy: easyQuestions,
+            medium: mediumQuestions,
+            hard: hardQuestions
+          }
+        };
+      });
+    }
+
     if (decodedSubject === 'Mathematics' && grade === '12') {
       return Object.keys(grade12Mathematics).map((chapterName, index) => {
         const questions = grade12Mathematics[chapterName];
