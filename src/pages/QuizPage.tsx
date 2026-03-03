@@ -40,16 +40,6 @@ const getQuestionsForSubject = (subject: string, chapter: string, difficulty: st
       const difficultyLevel = difficulty.toLowerCase() as 'easy' | 'medium' | 'hard';
       
       switch (subject) {
-        case 'Mathematics':
-          const grade11MathQuestions = getGrade11MathematicsQuestions(chapter, difficultyLevel, count);
-          return grade11MathQuestions.map(q => ({
-            id: q.id,
-            question: q.question,
-            options: q.options,
-            correct: q.correct,
-            explanation: q.explanation
-          }));
-          
         case 'Biology':
           const grade11BioQuestions = getGrade11BiologyQuestions(chapter, difficultyLevel, count);
           return grade11BioQuestions.map(q => ({

@@ -14,7 +14,16 @@ export const grade11Subjects: Grade11Subject[] = [
     name: 'Mathematics',
     icon: 'Calculator',
     description: 'Advanced mathematical concepts including algebra, geometry, and trigonometry',
-    chapters: [], // Empty - ready for chapters to be added
+    chapters: [
+      'Chapter 1: Sequences and Series',
+      'Chapter 2: Introduction to Calculus',
+      'Chapter 3: Coordinate Geometry and Transformation',
+      'Chapter 4: Statistics and Probability',
+      'Chapter 5: Exponential and Logarithmic Functions',
+      'Chapter 6: Trigonometric Functions',
+      'Chapter 7: Vectors in Two Dimensions',
+      'Chapter 8: Mathematical Proofs and Reasoning'
+    ],
     category: 'Mathematics'
   },
   {
