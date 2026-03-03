@@ -1,0 +1,4 @@
+project_id = "bwdqwfattvwmvwcwkgaa"
+
+[functions.career-simulator]
+verify_jwt = false
