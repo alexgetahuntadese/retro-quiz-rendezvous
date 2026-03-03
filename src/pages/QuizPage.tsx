@@ -14,7 +14,7 @@ import { getGrade11BiologyQuestions } from '@/data/grade11Biology';
 import { getGrade11PhysicsQuestions } from '@/data/grade11Physics';
 import { getGrade11ChemistryQuestions } from '@/data/grade11Chemistry';
 import { getGrade11AgricultureQuestions } from '@/data/grade11AgricultureQuestions';
-import { getGrade11MathematicsQuestions } from '@/data/grade11MathematicsQuestions';
+
 import QuestionCard from '@/components/QuestionCard';
 import Results from '@/components/Results';
 import { Button } from "@/components/ui/button";
