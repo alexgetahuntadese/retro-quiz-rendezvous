@@ -16,6 +16,7 @@ import { grade12CivicsQuestions } from '@/data/grade12CivicsQuestions';
 import { grade12ITQuestions } from '@/data/grade12ITQuestions';
 import { grade11Biology } from '@/data/grade11Biology';
 import { grade11AgricultureQuestions } from '@/data/grade11AgricultureQuestions';
+import { grade11MathematicsQuestions } from '@/data/grade11MathematicsQuestions';
 
 const ChaptersPage = () => {
   const navigate = useNavigate();
@@ -62,6 +63,32 @@ const ChaptersPage = () => {
           id: index + 1,
           title: chapterName,
           description: getGrade11AgricultureChapterDescription(chapterName),
+          duration: getDurationEstimate(questions.length),
+          difficulty: getDominantDifficulty(easyQuestions, mediumQuestions, hardQuestions),
+          progress: Math.floor(Math.random() * 101),
+          isCompleted: Math.random() > 0.7,
+          questionsCount: questions.length,
+          difficultyBreakdown: {
+            easy: easyQuestions,
+            medium: mediumQuestions,
+            hard: hardQuestions
+          }
+        };
+      });
+    }
+
+    // Handle Grade 11 Mathematics
+    if (decodedSubject === 'Mathematics' && grade === '11') {
+      return Object.keys(grade11MathematicsQuestions).map((chapterName, index) => {
+        const questions = grade11MathematicsQuestions[chapterName];
+        const easyQuestions = questions.filter(q => q.difficulty === 'Easy').length;
+        const mediumQuestions = questions.filter(q => q.difficulty === 'Medium').length;
+        const hardQuestions = questions.filter(q => q.difficulty === 'Hard').length;
+        
+        return {
+          id: index + 1,
+          title: chapterName,
+          description: getGrade11MathChapterDescription(chapterName),
           duration: getDurationEstimate(questions.length),
           difficulty: getDominantDifficulty(easyQuestions, mediumQuestions, hardQuestions),
           progress: Math.floor(Math.random() * 101),
@@ -341,6 +368,20 @@ const ChaptersPage = () => {
       "Unit 6: Population and natural resources": "Investigate population dynamics, environmental factors, and sustainable resource management"
     };
     return descriptions[chapterName] || "Comprehensive study of biological concepts and life processes";
+  };
+
+  const getGrade11MathChapterDescription = (chapterName: string) => {
+    const descriptions: { [key: string]: string } = {
+      "Chapter 1: Sequences and Series": "Explore arithmetic and geometric sequences, series, and their sums",
+      "Chapter 2: Introduction to Calculus": "Learn limits, derivatives, and rates of change",
+      "Chapter 3: Coordinate Geometry and Transformation": "Study lines, circles, and geometric transformations in the coordinate plane",
+      "Chapter 4: Statistics and Probability": "Analyze data, compute measures of central tendency, and solve probability problems",
+      "Chapter 5: Exponential and Logarithmic Functions": "Understand exponential growth, decay, and logarithmic properties",
+      "Chapter 6: Trigonometric Functions": "Master trigonometric ratios, identities, and applications",
+      "Chapter 7: Vectors in Two Dimensions": "Work with vector operations, dot products, and applications",
+      "Chapter 8: Mathematical Proofs and Reasoning": "Develop logical reasoning skills using various proof techniques"
+    };
+    return descriptions[chapterName] || "Comprehensive study of mathematical concepts";
   };
 
   const getGrade11AgricultureChapterDescription = (chapterName: string) => {
