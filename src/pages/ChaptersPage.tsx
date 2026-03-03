@@ -370,6 +370,20 @@ const ChaptersPage = () => {
     return descriptions[chapterName] || "Comprehensive study of biological concepts and life processes";
   };
 
+  const getGrade11MathChapterDescription = (chapterName: string) => {
+    const descriptions: { [key: string]: string } = {
+      "Chapter 1: Sequences and Series": "Explore arithmetic and geometric sequences, series, and their sums",
+      "Chapter 2: Introduction to Calculus": "Learn limits, derivatives, and rates of change",
+      "Chapter 3: Coordinate Geometry and Transformation": "Study lines, circles, and geometric transformations in the coordinate plane",
+      "Chapter 4: Statistics and Probability": "Analyze data, compute measures of central tendency, and solve probability problems",
+      "Chapter 5: Exponential and Logarithmic Functions": "Understand exponential growth, decay, and logarithmic properties",
+      "Chapter 6: Trigonometric Functions": "Master trigonometric ratios, identities, and applications",
+      "Chapter 7: Vectors in Two Dimensions": "Work with vector operations, dot products, and applications",
+      "Chapter 8: Mathematical Proofs and Reasoning": "Develop logical reasoning skills using various proof techniques"
+    };
+    return descriptions[chapterName] || "Comprehensive study of mathematical concepts";
+  };
+
   const getGrade11AgricultureChapterDescription = (chapterName: string) => {
     const descriptions: { [key: string]: string } = {
       "Chapter 1: Introduction to Crop Production": "Learn the fundamentals of crop production, types of crops, and basic agricultural practices",
