@@ -327,74 +327,8 @@ const ChaptersPage = () => {
       });
     }
     
-    return [
-      {
-        id: 1,
-        title: 'Introduction to Numbers',
-        description: 'Basic concepts of numbers, counting, and number systems',
-        duration: '2-3 hours',
-        difficulty: 'Beginner',
-        progress: 100,
-        isCompleted: true,
-        questionsCount: 25,
-        difficultyBreakdown: { easy: 10, medium: 10, hard: 5 }
-      },
-      {
-        id: 2,
-        title: 'Addition and Subtraction',
-        description: 'Learn fundamental arithmetic operations',
-        duration: '3-4 hours',
-        difficulty: 'Beginner',
-        progress: 75,
-        isCompleted: false,
-        questionsCount: 30,
-        difficultyBreakdown: { easy: 12, medium: 12, hard: 6 }
-      },
-      {
-        id: 3,
-        title: 'Multiplication and Division',
-        description: 'Master multiplication tables and division concepts',
-        duration: '4-5 hours',
-        difficulty: 'Intermediate',
-        progress: 45,
-        isCompleted: false,
-        questionsCount: 35,
-        difficultyBreakdown: { easy: 10, medium: 15, hard: 10 }
-      },
-      {
-        id: 4,
-        title: 'Fractions and Decimals',
-        description: 'Understanding parts of a whole and decimal notation',
-        duration: '3-4 hours',
-        difficulty: 'Intermediate',
-        progress: 0,
-        isCompleted: false,
-        questionsCount: 28,
-        difficultyBreakdown: { easy: 8, medium: 12, hard: 8 }
-      },
-      {
-        id: 5,
-        title: 'Geometry Basics',
-        description: 'Shapes, angles, and basic geometric concepts',
-        duration: '2-3 hours',
-        difficulty: 'Intermediate',
-        progress: 0,
-        isCompleted: false,
-        questionsCount: 22,
-        difficultyBreakdown: { easy: 8, medium: 10, hard: 4 }
-      },
-      {
-        id: 6,
-        title: 'Measurement and Units',
-        description: 'Length, weight, volume, and unit conversions',
-        duration: '2-3 hours',
-        difficulty: 'Beginner',
-        progress: 0,
-        isCompleted: false,
-        questionsCount: 20,
-        difficultyBreakdown: { easy: 10, medium: 8, hard: 2 }
-      },
-    ];
+    // Fallback: return empty for subjects without question data yet
+    return [];
   };
 
   const getGrade11BiologyChapterDescription = (chapterName: string) => {
