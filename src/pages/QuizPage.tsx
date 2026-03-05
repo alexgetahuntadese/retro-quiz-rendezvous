@@ -83,7 +83,7 @@ const getQuestionsForSubject = (subject: string, chapter: string, difficulty: st
           
         case 'Mathematics':
           const allMathQuestions = getGrade11MathematicsQuestions(chapter);
-          const grade11MathQuestions = (difficultyLevel && difficultyLevel !== 'all' 
+          const grade11MathQuestions = (difficultyLevel && difficultyLevel !== 'all' as string 
             ? allMathQuestions.filter(q => q.difficulty.toLowerCase() === difficultyLevel.toLowerCase()) 
             : allMathQuestions).slice(0, count);
           return grade11MathQuestions.map(q => ({
