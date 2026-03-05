@@ -372,14 +372,14 @@ const ChaptersPage = () => {
 
   const getGrade11MathChapterDescription = (chapterName: string) => {
     const descriptions: { [key: string]: string } = {
-      "Chapter 1: Sequences and Series": "Explore arithmetic and geometric sequences, series, and their sums",
-      "Chapter 2: Introduction to Calculus": "Learn limits, derivatives, and rates of change",
-      "Chapter 3: Coordinate Geometry and Transformation": "Study lines, circles, and geometric transformations in the coordinate plane",
-      "Chapter 4: Statistics and Probability": "Analyze data, compute measures of central tendency, and solve probability problems",
-      "Chapter 5: Exponential and Logarithmic Functions": "Understand exponential growth, decay, and logarithmic properties",
-      "Chapter 6: Trigonometric Functions": "Master trigonometric ratios, identities, and applications",
-      "Chapter 7: Vectors in Two Dimensions": "Work with vector operations, dot products, and applications",
-      "Chapter 8: Mathematical Proofs and Reasoning": "Develop logical reasoning skills using various proof techniques"
+      "Unit 1: Relations and Functions": "Study ordered pairs, domain, range, composition, and inverse of functions",
+      "Unit 2: Rational Expressions and Rational Functions": "Simplify rational expressions, find asymptotes, and solve rational equations",
+      "Unit 3: Matrices": "Learn matrix operations, multiplication, transpose, and inverse matrices",
+      "Unit 4: Determinants and their Properties": "Calculate determinants, explore properties, and apply Cramer's rule",
+      "Unit 5: Vectors": "Work with vector operations, dot products, projections, and applications",
+      "Unit 6: Transformations of the Plane": "Study translations, reflections, rotations, dilations, and their matrices",
+      "Unit 7: Statistics": "Analyze data using measures of central tendency, variance, and standard deviation",
+      "Unit 8: Probability": "Calculate probabilities, apply addition and multiplication rules, and Bayes' theorem"
     };
     return descriptions[chapterName] || "Comprehensive study of mathematical concepts";
   };
