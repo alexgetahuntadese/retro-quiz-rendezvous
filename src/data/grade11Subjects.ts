@@ -30,14 +30,15 @@ export const grade11Subjects: Grade11Subject[] = [
     id: 'physics',
     name: 'Physics',
     icon: 'Atom',
-    description: 'Fundamental principles of physics including mechanics, waves, and electricity',
+    description: 'Fundamental principles of physics including vectors, kinematics, dynamics, and thermodynamics',
     chapters: [
-      'Chapter 1: Mechanics',
-      'Chapter 2: Waves and Sound',
-      'Chapter 3: Heat and Thermodynamics',
-      'Chapter 4: Electricity and Magnetism',
-      'Chapter 5: Optics',
-      'Chapter 6: Modern Physics'
+      'Unit 1: Vectors',
+      'Unit 2: Kinematics',
+      'Unit 3: Dynamics',
+      'Unit 4: Work, Energy and Power',
+      'Unit 5: Rotational Motion',
+      'Unit 6: Fluid Mechanics',
+      'Unit 7: Temperature and Heat'
     ],
     category: 'Natural Sciences'
   },
