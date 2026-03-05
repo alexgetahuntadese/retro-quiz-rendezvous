@@ -8,7 +8,7 @@ const GradesPage = () => {
   const navigate = useNavigate();
   const { t } = useLanguage();
 
-  const grades = Array.from({ length: 12 }, (_, i) => i + 1);
+  const grades = Array.from({ length: 8 }, (_, i) => i + 5);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-800 to-indigo-700 p-4">
